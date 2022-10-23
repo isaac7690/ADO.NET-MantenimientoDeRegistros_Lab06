@@ -81,6 +81,7 @@
             this.Controls.Add(this.dgVendedores);
             this.Controls.Add(this.panel1);
             this.Name = "frmListadoVendedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListadoVendedores";
             this.Load += new System.EventHandler(this.frmListadoVendedores_Load);
             this.panel1.ResumeLayout(false);

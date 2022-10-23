@@ -31,6 +31,16 @@ namespace pjLaboratorio06_T3SN
             da.Fill(dt);
             return dt;
         }
+
+        public int generaCodigo()
+        {
+            cn = objCon.getConecta();
+            SqlCommand cmd = new SqlCommand("SP_NUEVOCODIGO", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cn.Close();
+            return int.Parse(cmd.ExecuteScalar().ToString());
+        }
+
         //2. registro del nuevo vendedor
         public int nuevoVendedor(Vendedor objV)
         {
