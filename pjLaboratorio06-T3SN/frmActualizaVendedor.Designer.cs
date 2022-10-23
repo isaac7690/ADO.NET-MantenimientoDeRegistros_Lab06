@@ -44,7 +44,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.dgVendedores = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVendedores)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -70,6 +72,7 @@
             this.btnBuscar.TabIndex = 33;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dtFecha
             // 
@@ -181,12 +184,23 @@
             this.btnActualizar.TabIndex = 36;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // dgVendedores
+            // 
+            this.dgVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgVendedores.Location = new System.Drawing.Point(13, 289);
+            this.dgVendedores.Name = "dgVendedores";
+            this.dgVendedores.Size = new System.Drawing.Size(727, 307);
+            this.dgVendedores.TabIndex = 37;
+            this.dgVendedores.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgVendedores_MouseDoubleClick);
             // 
             // frmActualizaVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 301);
+            this.ClientSize = new System.Drawing.Size(755, 607);
+            this.Controls.Add(this.dgVendedores);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.cboDistrito);
@@ -204,8 +218,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmActualizaVendedor";
             this.Text = "frmActualizaVendedor";
+            this.Load += new System.EventHandler(this.frmActualizaVendedor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVendedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +245,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DataGridView dgVendedores;
     }
 }
