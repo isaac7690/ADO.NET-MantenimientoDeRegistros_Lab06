@@ -27,7 +27,7 @@ namespace pjLaboratorio06_T3SN
             DataRow dr = objDAO.buscaVendedor(codigo).Rows[0];
 
             txtNombres.Text = dr[1].ToString();
-            txtApellidos.Text = dr[1].ToString();
+            txtApellidos.Text = dr[2].ToString();
             txtSueldo.Text = dr[3].ToString();
             dtFecha.Value = DateTime.Parse(dr[4].ToString());
             cboDistrito.Text = dr[5].ToString();
