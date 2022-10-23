@@ -47,5 +47,11 @@ namespace pjLaboratorio06_T3SN
         {
             this.Close();
         }
+
+        private void frmNuevoVendedor_Load(object sender, EventArgs e)
+        {
+            int n = objDAO.generaCodigo();
+            lblCodigo.Text = n.ToString("0000");
+        }
     }
 }

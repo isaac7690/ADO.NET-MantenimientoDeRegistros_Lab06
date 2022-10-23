@@ -35,10 +35,12 @@ namespace pjLaboratorio06_T3SN
         public int generaCodigo()
         {
             cn = objCon.getConecta();
+            cn.Open();
             SqlCommand cmd = new SqlCommand("SP_NUEVOCODIGO", cn);
             cmd.CommandType = CommandType.StoredProcedure;
+            int n= int.Parse(cmd.ExecuteScalar().ToString());
             cn.Close();
-            return int.Parse(cmd.ExecuteScalar().ToString());
+            return n;
         }
 
         //2. registro del nuevo vendedor
