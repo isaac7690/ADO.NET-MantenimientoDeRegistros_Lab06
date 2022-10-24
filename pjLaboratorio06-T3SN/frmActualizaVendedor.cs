@@ -39,7 +39,7 @@ namespace pjLaboratorio06_T3SN
             };
             try
             {
-                int n = objDAO.nuevoVendedor(objV);
+                int n = objDAO.actualizaVendedor(objV);
                 if (n == 1)
                     MessageBox.Show(n + " Registro de vendedor ACTUALIZADO ");
                     dgVendedores.DataSource = objDAO.listadoVendedores();
